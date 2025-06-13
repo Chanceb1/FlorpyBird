@@ -17,16 +17,16 @@ A comprehensive Unity 2D recreation of the popular mobile game Flappy Bird, feat
 ![Main Menu](images/HomeScreen.png)
 
 ### Gameplay
-![Gameplay](images/gameplay.png)
+![Gameplay](images/GamePlay.png)
 
 ### Game Over Screen
-![High Score](images/gameover.png)
+![High Score](images/GameOver.png)
 
 ### High Score Display
-![Game Over](images/highscore.png)
+![Game Over](images/HighScore.png)
 
 ### Game Rules
-![Game Rules](images/rules.png)
+![Game Rules](images/Rules.png)
 
 *All screenshots showcase the game's interface, animations, and visual design*
 
