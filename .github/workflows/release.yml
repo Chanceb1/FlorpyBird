@@ -1,0 +1,54 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Florpy Bird ${{ github.ref }}
+        body: |
+          ## What's New in Florpy Bird ${{ github.ref }}
+          
+          ### Features
+          - Complete Flappy Bird recreation with smooth 2D gameplay
+          - Main menu system with game rules and instructions
+          - Enhanced gameplay with fluid animations and sound effects
+          - Real-time scoring system with high score tracking
+          - Game over screen with score display and restart options
+          - Optimized for Windows 10 and Windows 11
+          
+          ### Download
+          Download the game zip file below, extract it to your desired location, and run `FlorpyBird.exe` to start playing!
+          
+          ### System Requirements
+          - **OS**: Windows 10 or Windows 11
+          - **Platform**: Desktop/PC
+          
+          **Full Changelog**: https://github.com/${{ github.repository }}/compare/v1.0.0...${{ github.ref }}
+        draft: false
+        prerelease: false
+        
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./FlorpyBird.zip
+        asset_name: FlorpyBird-${{ github.ref_name }}.zip
+        asset_content_type: application/zip

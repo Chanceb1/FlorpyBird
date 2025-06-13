@@ -30,12 +30,19 @@ A comprehensive Unity 2D recreation of the popular mobile game Flappy Bird, feat
 
 *All screenshots showcase the game's interface, animations, and visual design*
 
-## How to Run
+## Download & Installation
 
-1. Download the game zip file from the releases section
-2. Extract the contents to your desired location
-3. Run `FlorpyBird.exe` to start the game
-4. Enjoy playing!
+### Latest Release
+[![Latest Release](https://img.shields.io/github/v/release/Chanceb1/FlorpyBird)](https://github.com/Chanceb1/FlorpyBird/releases/latest)
+
+1. **Download**: Go to the [Releases](https://github.com/Chanceb1/FlorpyBird/releases) page and download the latest `FlorpyBird-vX.X.X.zip` file
+2. **Extract**: Unzip the downloaded file to your desired location on your computer
+3. **Run**: Double-click `FlorpyBird.exe` to launch the game
+4. **Play**: Use spacebar or mouse click to make the bird fly and avoid the pipes!
+
+### Controls
+- **Spacebar** or **Left Mouse Click**: Make the bird flap/fly
+- **ESC**: Pause game or return to main menu
 
 ## System Requirements
 
